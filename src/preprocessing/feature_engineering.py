@@ -48,3 +48,17 @@ class FeatureEngineer:
         )
         return self
     
+    def promo_discount_combo(self):
+        self.df['used_discount_or_promo'] = ((self.df['discount_applied'] == 1) | (self.df['promo_code_used'] == 1)).astype(int)
+        return self
+    
+    def generate_features(self):
+        return (self
+                .add_age_group()
+                .add_spend_category()
+                .map_frequency_score()
+                .review_sentiment()
+                .shipping_speed()
+                .promo_discount_combo()
+                .df)
+    

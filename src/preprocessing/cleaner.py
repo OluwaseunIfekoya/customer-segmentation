@@ -21,3 +21,10 @@ class DataCleaner:
         # Standardize column names to lowercase
         self.df.columns = self.df.columns.str.strip().str.replace(' ', '_').str.lower()
         return self()
+    
+    def clean(self):
+        return (self
+                .drop_columns()
+                .standardize_booleans()
+                .clean_column_names()
+                .df)
