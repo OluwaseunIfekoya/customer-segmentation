@@ -20,7 +20,7 @@ class DataCleaner:
     def clean_column_names(self):
         # Standardize column names to lowercase
         self.df.columns = self.df.columns.str.strip().str.replace(' ', '_').str.lower()
-        return self()
+        return self
     
     def clean(self):
         return (self

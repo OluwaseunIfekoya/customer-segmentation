@@ -21,7 +21,7 @@ class FeatureEngineer:
             'Once': 0,
             'Annually': 1,
             'Quarterly': 2,
-            'Every 3 months': 3,
+            'Every 3 Months': 3,
             'Monthly': 4,
             'Fortnightly': 5,
             'Bi-Weekly': 6,
