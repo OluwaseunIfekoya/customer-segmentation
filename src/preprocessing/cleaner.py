@@ -6,7 +6,7 @@ class DataCleaner:
     
     def drop_columns(self):
         # Drop unnecessary columns
-        columns_to_drop = ['Unnamed: 0', 'Customer ID']
+        columns_to_drop = ['Unnamed: 0']
         self.df.drop(columns=[col for col in columns_to_drop if col in self.df.columns], inplace=True)
         return self 
     
